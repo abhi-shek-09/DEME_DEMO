@@ -1,14 +1,31 @@
-// Navbar.js
-import React, { useState } from 'react';
-import './navbar.css';
+import React, { useState, useEffect } from 'react';
 import { RiCloseLine, RiMenu3Line } from 'react-icons/ri';
+
+import './navbar.css'; // Import your CSS file
 
 const Navbar = () => {
   const [toggleMenu, setToggleMenu] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 0) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
 
   return (
     <div>
-      <div className='navbar' id='navbar'>
+      <div className={`navbar ${isScrolled ? 'navbar__blurry' : ''}`} id='navbar'>
         <div className='navbar_links'>
           <div className='navbar__links-container'>
             <p><a href='#Shop' alt='Shop'>Shop</a></p>

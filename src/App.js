@@ -1,17 +1,14 @@
 import React from 'react';
-import { Navbar, Header } from './components';
+import { Navbar, Header, Collections } from './components';
 import './App.css';
-import img1 from './assets/p10.JPG';
+import img1 from './assets/p9.JPG';
 
 function App() {
   return (
     <div className="App">
       <Navbar/>
-      <div className='exp' dir="rtl">
-        <section>
-          <Header img = {img1}/>
-        </section>
-      </div>
+      <Header img = {img1}/>
+      <Collections/>
     </div>
   );
 }

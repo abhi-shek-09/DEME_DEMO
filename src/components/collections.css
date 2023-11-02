@@ -1,0 +1,19 @@
+.deme__collections{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.deme__collections-panes{
+    display: flex;
+    flex-direction: row;
+}
+
+.deme__collections-img1{
+    padding: 3rem;
+    padding-top: 8rem;
+}
+
+.deme__collections-img2{
+    padding: 3rem;
+}

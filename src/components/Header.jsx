@@ -3,9 +3,9 @@ import './header.css'
 const Header = (props) => {
   return (
     <div>
-        <section className='header__image'>
+        <div className='header__image'>
             <img src={props.img} alt='girl pic'/>
-        </section>
+        </div>
     </div>
   )
 }
