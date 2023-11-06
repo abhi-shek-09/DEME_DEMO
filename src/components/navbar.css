@@ -14,10 +14,6 @@
   transition: backdrop-filter 0.3s ease;
 }
 
-.navbar__blurry {
-  backdrop-filter: blur(10px); /* Adjust the blur value as needed */
-}
-
 .navbar__heading {
   display: flex;
   flex-direction: column;

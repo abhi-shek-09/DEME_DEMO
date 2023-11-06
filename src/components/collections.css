@@ -9,14 +9,21 @@
     flex-direction: row;
   }
   
-  .deme__collections-img1 {
-    padding: 3rem;
-    padding-top: 8rem;
-  }
-  
-  .deme__collections-img2 {
-    padding: 3rem;
-  }
+  .deme__collections-img1,
+.deme__collections-img2 {
+  padding: 3rem;
+  transition: transform 0.3s; /* Add a transition for the transform property */
+}
+
+.deme__collections-img1{
+  padding-top: 9rem;
+}
+
+.deme__collections-img1:hover,
+.deme__collections-img2:hover {
+  transform: scale(1.03); /* Enlarge the image on hover */
+}
+
   
   @media screen and (max-width: 1280px) {
     .deme__collections-panes {
